@@ -1,4 +1,4 @@
-package com.miniproyects;
+package com.victorrik.miniproyects;
 
 import com.facebook.react.ReactActivity;
 
