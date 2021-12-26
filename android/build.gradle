@@ -4,9 +4,12 @@ buildscript {
     ext {
         buildToolsVersion = "30.0.2"
         minSdkVersion = 21
-        compileSdkVersion = 30
+        compileSdkVersion = 31
         targetSdkVersion = 30
         ndkVersion = "21.4.7075529"
+        googlePlayServicesIidVersion = "17.0.0" // default: "17.0.0" - AndroidX
+        playServicesVersion = "17.0.0" // or find latest version
+        androidXCore = "1.0.2"
     }
     repositories {
         google()
@@ -31,6 +34,10 @@ allprojects {
             // Android JSC is installed from npm
             url("$rootDir/../node_modules/jsc-android/dist")
         }
+    // ADD THIS BLOCK - this is how Notifee finds it's Android library:
+    maven {
+      url "$rootDir/../node_modules/@notifee/react-native/android/libs"
+    }
 
         google()
         maven { url 'https://www.jitpack.io' }
