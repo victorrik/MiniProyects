@@ -10,10 +10,9 @@ function Splash({navigation}){
     verifico()
   },[]); 
   const verifico =async()=>{
-    SplashScreen.hide();
-    StatusBar.setBarStyle('light-content');
+    SplashScreen.hide(); 
     if (isAndroid) {
-      StatusBar.setBackgroundColor(colorApp.negroP);  
+      StatusBar.setBackgroundColor(colorApp.grisP);  
     } 
     setTimeout(() => {
       navigation.replace('HomeProjects')

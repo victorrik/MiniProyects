@@ -8,11 +8,22 @@ import MainContext from './context';
 
 import Splash from './Splash';
 import HomeProjects from './HomeProjects';
-import Printer from './screens/Printer';
+//import Printer from './screens/Printer';
 import Location from './screens/Location';
-import AboutMe from './screens/AboutMe';
+import Components from './screens/Components';
+import About from './screens/About';
+import Icons from './screens/Icons';
+import InfoDevice from './screens/InfoDevice';
 
 
+import { colorApp } from './utils/constants';
+
+/**
+ * 
+						<Stack.Screen name="Printer" component={Printer}
+							options={{headerTitle:()=>setTS('Impresora')}}
+						/>
+ */
 
 
 const Stack = createNativeStackNavigator();
@@ -34,23 +45,32 @@ const Screens=()=>{
         	}}
         >
         	<Stack.Navigator 
-					screenOptions={{
-						animation:'slide_from_right'
-					}}  >
+						screenOptions={{
+							animation:'slide_from_right', 
+						 
+						}}  >
             <Stack.Screen name="Splash" component={Splash}
 						 options={{headerShown:false}} />
 						<Stack.Screen name="HomeProjects" component={HomeProjects}
 							options={{headerTitle:()=>setTS('Mini proyectos')}}
 						/>
-						<Stack.Screen name="Printer" component={Printer}
-							options={{headerTitle:()=>setTS('Impresora')}}
-						/>
 						<Stack.Screen name="Location" component={Location}
 							options={{headerTitle:()=>setTS('Locacion')}}
 						/>
-						<Stack.Screen name="AboutMe" component={AboutMe}
+						<Stack.Screen name="Components" component={Components}
+							options={{headerTitle:()=>setTS('Componentes')}}
+						/>
+						<Stack.Screen name="InfoDevice" component={InfoDevice}
+							options={{headerTitle:()=>setTS('Info. Dispositivo')}}
+						/>
+						
+						<Stack.Screen name="Icons" component={Icons}
+							options={{headerTitle:()=>setTS('Iconos')}}
+						/>
+						<Stack.Screen name="About" component={About}
 							options={{headerTitle:()=>setTS('Acerca de mi App')}}
 						/>
+						
 						
         	</Stack.Navigator>
         </NavigationContainer>

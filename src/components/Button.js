@@ -1,21 +1,21 @@
-import React, {Fragment} from 'react'
-import {ActivityIndicator, View, TouchableHighlight, StyleSheet} from 'react-native';
+import React, { Fragment } from 'react'
+import {ActivityIndicator, View, TouchableHighlight, StyleSheet, Platform} from 'react-native';
 import {colorApp}from '../utils/constants'; 
 
-let sizePersist = {height:0,width:0}
+
 const Button = (props) => {   
   const {
     style = {}, 
     children,
     loading = false,
-    colorPress = 'rgba(255,255,255,0.15)',
+    colorPress = "#FF628A",
     disabled = false,
     colorLoading = 'white',
     ...restoProps
   } = props; 
   if (loading) {
     return (
-      <View style={{...styles.btnUwU,...style,...sizePersist}}>
+      <View style={{...styles.btnUwU,...style}}>
         <ActivityIndicator color={colorLoading}/>
       </View>
     )
@@ -23,8 +23,8 @@ const Button = (props) => {
   
   return(
     <TouchableHighlight {...restoProps}
-    disabled={disabled}
-    underlayColor="#FF628A"
+    disabled={(loading || disabled)}
+    underlayColor={colorPress}
     style={{...styles.btnUwU,...style}} >
       <Fragment  >
       {children}
@@ -43,7 +43,13 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     paddingVertical:15,
     paddingHorizontal:10,
-    backgroundColor:colorApp.grisP
+    backgroundColor:colorApp.aquaP,
+    ...Platform.select({
+      android: {},
+      ios: {
+        borderRadius:10,
+      }
+    })
   }, 
 });
 

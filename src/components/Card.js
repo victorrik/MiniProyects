@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Platform } from 'react-native';
 //import Button from './Button'
 
 const Card = ({style = {},children=null,elevation =  2}) => {
@@ -37,6 +37,14 @@ const styles = StyleSheet.create({
   cardContainer:{
     backgroundColor:"white",
     padding:10, 
+    ...Platform.select({
+      ios:{
+        borderRadius:10,
+      },
+      android:{
+        borderRadius:0
+      }
+    })
   }, 
 });
 

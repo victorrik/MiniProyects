@@ -63,7 +63,7 @@ En tiempo libre y ocurrencias, pruebo librerias e intento crear componentes solo
 > https://github.com/gorhom/react-native-paper-onboarding
 > https://github.com/flyerhq/react-native-chat-ui
 > https://github.com/benevbright/react-navigation-collapsible
-> 
+> https://github.com/gorhom/react-native-bottom-sheet
 > 
 
 ## Notas internas
@@ -123,3 +123,8 @@ rm -rf ios/Podfile.lock && rm -rf ios/Pods
 - Volvemos a instalar los pods
 cd ios && pod repo update && pod update && pod install
 
+
+react-native-ble-manager
+react-native-ble-plx
+react-native-thermal-receipt-printer
+tp-react-native-bluetooth-printer

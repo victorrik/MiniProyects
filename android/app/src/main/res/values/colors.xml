@@ -1,3 +1,5 @@
 <resources>
   <color name="colorPrimary">#252a34</color>
+  <color name="colorBg">#fff</color>
+  
 </resources>
