@@ -4,15 +4,18 @@ import {iconos} from '../../components/IcoBootstrap/objIcons';
 import { IcoBootstrap, Text, Card} from '../../components'
 
 
-const Icons = () => {
-  const iconosFiltrados = Object.entries(iconos) 
+const Icons = () => { 
+  const iconosFiltrados = Object.entries(iconos);
+  const faltantes = iconosFiltrados.filter(([key,value])=>value === null);
+   
   return (
     <View style={styles.container}>
       <View style={{marginVertical:10,paddingHorizontal:15}} >
         <Text style={{textAlign:'justify'}} >Todos los iconos que estan en <Text style={{fontWeight:'bold'}} >Bootstrap Icons </Text> han sido copiados y pasados a un objeto que igual pertenece a un componente <Text style={{fontWeight:'bold'}} >IcoBootstrap</Text> que en algun momento sera visto </Text> 
-        <Text style={{marginTop:10}} >Todavia hay pendiente y poco a poco se iran agregando</Text>
-        <Text style={{marginTop:10,fontWeight:'bold'}} >Total iconos en Bootstrap: <Text>{iconosFiltrados.length}</Text> </Text>
         
+        <Text style={{marginTop:10,fontWeight:'bold'}} >Total iconos (hasta ahora) en Bootstrap: <Text>{iconosFiltrados.length}</Text> </Text>
+        <Text style={{marginTop:10,fontWeight:'bold'}} >Iconos guardados: <Text>{iconosFiltrados.length - faltantes.length}</Text> </Text>
+        <Text style={{marginTop:10,fontWeight:'bold'}} >Iconos faltantes: <Text>{faltantes.length}</Text> </Text>
       </View>
       <FlatList 
         data={iconosFiltrados}

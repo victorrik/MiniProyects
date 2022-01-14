@@ -68,6 +68,17 @@ const HomeProjects = ({navigation}) => {
           />
         </View>
 
+        <View style={styles.rows} >
+          <BtnProject 
+            onPress={()=>goToScreen('Videos')}
+            text="Video"
+            image={turtle}
+            fondo="#7DCEA0"
+          />
+          <View style={{width:15}} /> 
+          <View style={{flex:1}} />
+        </View>
+
        <View style={styles.rows} >
         <Card style={{padding:0,flex:1}}>
           <Button style={styles.btnStyle} onPress={()=>goToScreen('AboutMe')} >

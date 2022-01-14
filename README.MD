@@ -128,3 +128,9 @@ react-native-ble-manager
 react-native-ble-plx
 react-native-thermal-receipt-printer
 tp-react-native-bluetooth-printer
+
+https://github.com/ammarahm-ed/react-native-mmkv-storage
+
+https://github.com/shijingsh/react-native-customized-image-picker
+
+https://github.com/Microsoft/react-native-code-push

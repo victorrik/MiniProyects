@@ -14,6 +14,7 @@ import Components from './screens/Components';
 import About from './screens/About';
 import Icons from './screens/Icons';
 import InfoDevice from './screens/InfoDevice';
+import Videos from './screens/Videos';
 
 
 import { colorApp } from './utils/constants';
@@ -63,6 +64,10 @@ const Screens=()=>{
 						<Stack.Screen name="InfoDevice" component={InfoDevice}
 							options={{headerTitle:()=>setTS('Info. Dispositivo')}}
 						/>
+						<Stack.Screen name="Videos" component={Videos}
+							options={{headerTitle:()=>setTS('Videos')}}
+						/>
+						
 						
 						<Stack.Screen name="Icons" component={Icons}
 							options={{headerTitle:()=>setTS('Iconos')}}

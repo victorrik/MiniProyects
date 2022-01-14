@@ -34,12 +34,13 @@ allprojects {
             // Android JSC is installed from npm
             url("$rootDir/../node_modules/jsc-android/dist")
         }
-    // ADD THIS BLOCK - this is how Notifee finds it's Android library:
-    maven {
-      url "$rootDir/../node_modules/@notifee/react-native/android/libs"
-    }
+            // ADD THIS BLOCK - this is how Notifee finds it's Android library:
+            maven {
+            url "$rootDir/../node_modules/@notifee/react-native/android/libs"
+            }
 
         google()
+        jcenter()
         maven { url 'https://www.jitpack.io' }
     }
 }

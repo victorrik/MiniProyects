@@ -103,9 +103,11 @@ const Location = ({navigation}) => {
   const stopWatchPosition=()=>{
     if (watchID) {
       Geolocation.clearWatch(watchID);
-      watchID = null;
-      setModoRastreo(false)
+      watchID = null;  
+      setModoRastreo(false);
+      return
     }
+    setModoRastreo(false)
     
   } 
   
@@ -113,6 +115,7 @@ const Location = ({navigation}) => {
 
   return (
     <View style={{...styles.container,paddingBottom:insets.bottom + 20}}>
+      <Text style={{fontSize:10}} >watchID:{watchID}</Text>
       <View style={{marginBottom:10}} >
       {acceso?
         <Fragment>
